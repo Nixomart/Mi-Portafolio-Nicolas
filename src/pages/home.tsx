@@ -2,11 +2,11 @@ import Nav from "../components/Nav";
 
 export default function Home() {
   return (
-    <div className="bg-gray-100 h-screen w-screen flex flex-col sm:flex-row">
+    <div className="bg-gray-100 dark:bg-gray-800 h-screen w-screen flex flex-col sm:flex-row">
       <Nav />
       <div className="flex-grow max-w-md pl-5 ">
-        <h1 className="italic text-xl font-bold">Un poco sobre mi.</h1>
-        <p>
+        <h1 className="italic dark:text-white text-xl font-bold">Un poco sobre mi.</h1>
+        <p className="dark:text-white">
           Me llamo Nicolas, actualmente tengo {new Date().getFullYear() - 2003}{" "}
           años. Soy un apacionado por la tecnologia y todo lo que seria crear
           soluciones.

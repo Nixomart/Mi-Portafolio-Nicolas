@@ -52,10 +52,10 @@ export default function Projects() {
     },
   ];
   return (
-    <div className="bg-gray-100 h-screen w-screen flex flex-col sm:flex-row">
+    <div className="bg-gray-100 dark:bg-gray-800 h-screen 2xl:w-screen flex flex-col sm:flex-row">
       <Nav />
-      <div className="flex-grow flex sm:flex-col-reverse">
-        <div className=" w-3/4 sm:w-1/4 mt-auto pb-20 pl-5">
+      <div className="flex-grow sm:w-3/4 dark:text-white flex sm:flex-col-reverse">
+        <div className=" w-3/4 sm:flex-grow mt-auto pb-20 pl-5">
           <div className="justify-center flex">
             <button
               onClick={() =>
@@ -89,7 +89,7 @@ export default function Projects() {
             scrollbarWidth: "thin",
             scrollbarColor: "transparent transparent",
           }}
-          className="w-full border-l sm:w-1/4   border-gray-600"
+          className="w-full  border-l sm:flex-grow sm:border-l-0    border-gray-600"
         >
           {texts.map((text, index) => (
             <div

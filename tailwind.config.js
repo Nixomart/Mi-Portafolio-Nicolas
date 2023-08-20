@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
 ],  theme: {
@@ -16,7 +17,7 @@ export default {
     'md': {'max': '767px'},
     // => @media (max-width: 767px) { ... }
 
-    'sm': {'max': '639px'},
+    'sm': {'max': '1009px'},
     // => @media (max-width: 639px) { ... }
   },
     extend: {},

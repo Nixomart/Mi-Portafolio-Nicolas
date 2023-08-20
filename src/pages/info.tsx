@@ -7,15 +7,15 @@ export default function Info() {
   const [tech, setTech] = useState("");
 
   return (
-    <div className="bg-gray-100 h-screen w-full sm:flex ">
+    <div className="bg-gray-100 dark:bg-gray-800 h-screen w-full sm:flex ">
       <Nav />
       <section className="grid grid-cols-4 w-full">
         <div
           id="div-scroll"
           style={{ maxHeight: 'calc(100vh - 64px)', boxSizing: 'border-box' }}
-          className="py-10 pl-5 max-h-[calc(100vh - 64px)] col-span-1 sm:col-span-4 overflow-y-auto"
+          className="py-10 pl-5 max-h-[calc(100vh - 64px)] col-span-1 dark:text-white sm:col-span-4 overflow-y-auto"
           >
-          <h1 className="italic text-2xl font-bold underline">
+          <h1 className="italic dark:text-white text-2xl font-bold underline">
             Me llamo Nicolas
           </h1>
           <p>
