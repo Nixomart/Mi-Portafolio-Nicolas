@@ -2,9 +2,8 @@ import Nav from "../components/Nav";
 
 export default function Home() {
   return (
-    <div className="bg-gray-100 h-screen w-screen flex flex-col">
+    <div className="bg-gray-100 h-screen w-screen flex flex-col sm:flex-row">
       <Nav />
-      <div className="flex-grow ">images</div>
       <div className="flex-grow max-w-md pl-5 ">
         <h1 className="italic text-xl font-bold">Un poco sobre mi.</h1>
         <p>

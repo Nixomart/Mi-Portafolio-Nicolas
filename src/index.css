@@ -10,3 +10,8 @@ h1, h2, label, span, p, h3,h4,h5, a,li{
 #div-scroll::-webkit-scrollbar{
     display: none;
 }
+
+.nav-vertical {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+  }

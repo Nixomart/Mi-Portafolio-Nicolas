@@ -52,22 +52,22 @@ export default function Projects() {
     },
   ];
   return (
-    <div className="bg-gray-100 h-screen w-screen flex flex-col">
+    <div className="bg-gray-100 h-screen w-screen flex flex-col sm:flex-row">
       <Nav />
-      <div className="flex-grow flex">
-        <div className=" w-3/4 mt-auto pb-20 pl-5">
+      <div className="flex-grow flex sm:flex-col-reverse">
+        <div className=" w-3/4 sm:w-1/4 mt-auto pb-20 pl-5">
           <div className="justify-center flex">
             <button
               onClick={() =>
                 setCurrentText(currentText == 0 ? 2 : currentText - 1)
               }
             >
-              <PiArrowLeftThin className="font-thin text-4xl" />
+              <PiArrowLeftThin className="font-thin sm:text-2xl text-4xl" />
             </button>
             {texts.map((text, index) => (
               <div className="">
                 <h1
-                  className={`text-center text-3xl w-80 ${
+                  className={`text-center sm:text-xl text-3xl w-80 sm:w-40 ${
                     index === currentText ? "block" : "hidden"
                   }`}
                 >
@@ -80,7 +80,7 @@ export default function Projects() {
                 setCurrentText(currentText === 2 ? 0 : currentText + 1)
               }
             >
-              <PiArrowRightThin className="font-thin text-4xl" />
+              <PiArrowRightThin className="font-thin sm:text-2xl text-4xl" />
             </button>
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function Projects() {
             scrollbarWidth: "thin",
             scrollbarColor: "transparent transparent",
           }}
-          className="w-full border-l    border-gray-600"
+          className="w-full border-l sm:w-1/4   border-gray-600"
         >
           {texts.map((text, index) => (
             <div
@@ -97,22 +97,22 @@ export default function Projects() {
                 index === currentText ? "block" : "hidden"
               }`}
             >
-              <h1 className="text-center border-b border-gray-600 py-5 font-semibold">
+              <h1 className="text-center sm:text-lg border-b sm:py-1 border-gray-600 py-5 font-semibold">
                 Proyecto
               </h1>
               <div className="border-b flex justify-center border-gray-600">
                 <a
                   target="_blank"
                   href={text.link}
-                  className="text-center  py-10 text-4xl "
+                  className="text-center sm:text-xl sm:py-1 py-10 text-4xl "
                 >
                   {text.title}
                 </a>
               </div>
-              <h1 className="text-center border-b border-gray-600 py-5 font-semibold">
+              <h1 className="text-center border-b border-gray-600 py-5 sm:py-1 font-semibold">
                 Acerca del Proyecto
               </h1>
-              <p className="text-center py-5 border-gray-600 border-b text-xl  ">
+              <p className="text-center py-5 border-gray-600 border-b text-xl sm:text-sm  ">
                 {text.paragraph}
               </p>
               <h1 className="text-center border-b border-gray-600 py-5 font-semibold">
