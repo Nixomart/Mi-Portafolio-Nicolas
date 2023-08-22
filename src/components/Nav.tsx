@@ -1,6 +1,6 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import '../index.css'
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { PiMoonThin, PiSunThin } from "react-icons/pi";
 import { useDarkMode } from "../context/DarkMode";
 export default function Nav() 
