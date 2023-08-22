@@ -37,7 +37,7 @@ export default function InfoView({ state, text }: any) {
   ];
 
   return (
-    <div className="border-l col-span-2 sm:hidden col-start-3 border-gray-600 ">
+    <div className="border-l col-span-2 sm:hidden col-start-3 dark:text-white border-gray-600 ">
       {texts.map((text, index) => (
         <div className={`mx-auto  ${index === state ? "block" : "hidden"}`}>
           <h1 className="text-center border-b border-gray-600 py-5 font-semibold">
