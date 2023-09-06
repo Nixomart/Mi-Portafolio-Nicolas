@@ -42,9 +42,9 @@ export default function Nav()
             {theme === 'dark' ? 
             
             
-            <PiSunThin  className='dark:text-white text-xl'/>
+            <PiSunThin  className='dark:text-white  text-xl'/>
             : 
-            <PiMoonThin  className='dark:text-white text-xl'/> 
+            <PiMoonThin  className='dark:text-white  text-xl'/> 
 
           }
 

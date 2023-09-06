@@ -7,7 +7,7 @@ export default function Info() {
   const [tech, setTech] = useState("");
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 h-screen w-full sm:flex ">
+    <div className="bg-gray-100  dark:bg-gray-800 h-screen w-full sm:flex ">
       <Nav />
       <section className="grid grid-cols-4 w-full">
         <div
@@ -78,6 +78,10 @@ export default function Info() {
           </div>
           <div onMouseEnter={()=>{setTech('back'), setCurrent(-1)}} className="py-5 transition-all ease-in-out hover:bg-gray-700 hover:text-white">
             <h1 className="font-semibold">Como Backend</h1>
+            <hr className="py-[0.5px] my-2 w-full   bg-gray-600" />
+          </div>
+          <div onMouseEnter={()=>{setTech('aprendiendo'), setCurrent(-1)}} className="py-5 transition-all ease-in-out hover:bg-gray-700 hover:text-white">
+            <h1 className="font-semibold">Aprendiendo...</h1>
             <hr className="py-[0.5px] my-2 w-full   bg-gray-600" />
           </div>
         </div>

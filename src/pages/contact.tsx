@@ -1,6 +1,22 @@
 import Nav from "../components/Nav";
-
+import Pdf from '../../public/Nicolas_Martinez_CV.pdf'
 export default function Contact() {
+  const handleDownload = () => {
+    // Crear un objeto Blob (por ejemplo, un archivo de texto)
+    const data = 'Contenido del archivo a descargar';
+    const blob = new Blob([data], { type: 'text/plain' });
+
+    // Crear un enlace de descarga y hacer clic en él
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    //pdf
+    a.download = Pdf;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+  };
   return (
     <div className="bg-gray-100 dark:bg-gray-800 h-screen 2xl:w-screen flex flex-col sm:flex-row">
       <Nav />
@@ -33,6 +49,14 @@ export default function Contact() {
               className="hover:underline"
             >
               Mi portafolio - Github
+            </a>
+            <h2 className="font-semibold">Descargar CV: </h2>
+            <a
+            href={Pdf}
+            download
+              className="hover:underline"
+            >
+              Mi Curriculum
             </a>
           </div>
         </div>
