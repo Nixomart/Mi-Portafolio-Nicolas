@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div className="bg-gray-100 dark:bg-gray-800 h-screen 2xl:w-screen flex flex-col sm:flex-row">
       <Nav />
-      <div className="sm:w-3/4 dark:text-white pl-10 flex flex-col flex-grow">
+      <div className="sm:w-3/4 dark:text-white pl-5 flex flex-col flex-grow">
         <h1 className="italic text-xl font-bold py-5 ">
           Estoy Disponible para cualquier Proyecto o Cualquier propuesta.
         </h1>

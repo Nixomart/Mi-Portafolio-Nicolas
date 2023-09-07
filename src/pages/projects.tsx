@@ -1,5 +1,6 @@
 import Nav from "../components/Nav";
 import { useState } from "react";
+import '../index.css'
 import { PiArrowRightThin, PiArrowLeftThin } from "react-icons/pi";
 export default function Projects() {
   const [currentText, setCurrentText] = useState(0);
@@ -52,22 +53,22 @@ export default function Projects() {
     },
   ];
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 h-screen 2xl:w-screen flex flex-col sm:flex-row">
+    <div   className="bg-gray-100 h-screen dark:bg-gray-800 2xl:w-screen flex flex-col sm:flex-row">
       <Nav />
-      <div className="flex-grow sm:w-3/4 dark:text-white flex sm:flex-col-reverse">
-        <div className=" w-3/4 sm:flex-grow mt-auto pb-20 pl-5">
+      <div className="sm:w-5/6  dark:text-white flex  sm:flex-col-reverse">
+        <div className=" w-3/4 sm:w-full h-auto sm:h-5 sm:pb-20 sm:py-10 sm:border-t mt-auto pb-20 sm:border-gray-600  sm:pl-0 ">
           <div className="justify-center flex">
             <button
               onClick={() =>
                 setCurrentText(currentText == 0 ? 2 : currentText - 1)
               }
             >
-              <PiArrowLeftThin className="font-thin sm:text-2xl text-4xl" />
+              <PiArrowLeftThin className="font-thin z-50 sm:text-4xl text-4xl" />
             </button>
             {texts.map((text, index) => (
               <div className="">
                 <h1
-                  className={`text-center sm:text-xl text-3xl w-80 sm:w-40 ${
+                  className={`text-center sm:text-xl  text-3xl w-80 sm:w-52 ${
                     index === currentText ? "block" : "hidden"
                   }`}
                 >
@@ -80,7 +81,7 @@ export default function Projects() {
                 setCurrentText(currentText === 2 ? 0 : currentText + 1)
               }
             >
-              <PiArrowRightThin className="font-thin sm:text-2xl text-4xl" />
+              <PiArrowRightThin className="font-thin sm:text-4xl text-4xl" />
             </button>
           </div>
         </div>
@@ -88,8 +89,10 @@ export default function Projects() {
           style={{
             scrollbarWidth: "thin",
             scrollbarColor: "transparent transparent",
+            maxHeight: "calc(100vh - 50px)", boxSizing: "border-box" 
           }}
-          className="w-full  border-l sm:flex-grow sm:border-l-0    border-gray-600"
+          id="div-scroll"
+          className="w-full  border-l max sm:flex-grow sm:border-l-0  overflow-auto  border-gray-600"
         >
           {texts.map((text, index) => (
             <div
@@ -119,12 +122,13 @@ export default function Projects() {
                 ¿Que tecnología use?
               </h1>
               <div className="h-full flex-grow flex justify-center ">
-                <div className="grid grid-cols-4 gap-3 gap-x-20 w-max">
+                <div  id="div-scroll"
+      style={{ maxHeight: "calc(100vh - 50px)", boxSizing: "border-box" }} className="grid grid-cols-3 gap-3 px-3 max-h-11 gap-x-20 w-max">
                   {text.technologies.map((tech, index) => (
                     <img
                       key={index}
                       src={tech}
-                      className="rounded-full w-20 object-cover hover:shadow-2xl transition-all ease-in-out"
+                      className="rounded-full w-36 object-cover hover:shadow-2xl transition-all ease-in-out"
                     />
                   ))}
                 </div>

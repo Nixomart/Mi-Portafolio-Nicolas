@@ -23,7 +23,7 @@ export default function Nav()
     setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
-    <nav className="bg-transparent border-b sm:w-14 sm:border-r sm:border-gray-600  border-gray-600">
+    <nav className="bg-transparent border-b sm:border-r sm:w-1/6 sm:border-gray-600  border-gray-600">
       <ul className="flex 2xl:gap-x-5 sm:gap-x-0 sm:h-screen  sm:gap-y-20 sm:pt-20  sm:flex-col-reverse  2xl:py-2 2xl:px-6">
         <li className="sm:-rotate-90 sm:h-max" >
           <NavLink to={"/"} className={`${pathname === '/' ? 'font-bold' : 'font-medium '} hover:font-bold  text-xl dark:text-white`} >Inicio</NavLink>

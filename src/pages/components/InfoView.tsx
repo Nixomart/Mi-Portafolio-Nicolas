@@ -70,7 +70,7 @@ export default function InfoView({ state, text }: any) {
     <div
       id="div-scroll"
       style={{ maxHeight: "calc(100vh - 50px)", boxSizing: "border-box" }}
-      className="border-l  col-span-2 overflow-auto  sm:col-span-4 sm:border-l-0 sm:border-t  col-start-3 dark:text-white border-gray-600 "
+      className="border-l  sm:h-1/2 col-span-2 overflow-auto  sm:col-span-4 sm:border-l-0 sm:border-t  col-start-3 dark:text-white border-gray-600 "
     >
       {texts.map((text, index) => (
         <div className={`mx-auto  ${index === state ? "block" : "hidden"}`}>
@@ -95,14 +95,16 @@ export default function InfoView({ state, text }: any) {
           <h1 className="text-center border-b border-gray-600 py-5 font-semibold">
             ¿Que hice?
           </h1>
-          <div className="gap-3 gap-x-20">
-            <p className="text-center">{text.how}</p>
+          <div className="gap-3 gap-x-20 ">
+          {text.how.map((text:any)=>(
+            <p className="text-center">{text}</p>
+          ))}
           </div>
         </div>
       ))}
 
       {text == "front" && (
-        <div className="flex justify-around">
+        <div className="flex  justify-around">
           {" "}
           <div className="grid grid-cols-2 self-center gap-x-52 sm:gap-x-10 gap-y-10 ">
             {frontend.map((fron: any) => (

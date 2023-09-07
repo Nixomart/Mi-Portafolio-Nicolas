@@ -9,11 +9,11 @@ export default function Info() {
   return (
     <div className="bg-gray-100  dark:bg-gray-800 h-screen w-full sm:flex ">
       <Nav />
-      <section className="grid grid-cols-4 w-full">
+      <section className="grid sm:border-b sm:border-r sm:border-t grid-cols-4 sm:flex sm:flex-col w-full">
         <div
           id="div-scroll"
           style={{ maxHeight: 'calc(100vh - 64px)', boxSizing: 'border-box' }}
-          className="py-10 pl-5 max-h-[calc(100vh - 64px)] col-span-1 dark:text-white sm:col-span-4 overflow-y-auto"
+          className="py-5 sm:h-1/2 pl-5 max-h-[calc(100vh - 64px)] col-span-1 dark:text-white sm:col-span-4 overflow-y-auto"
           >
           <h1 className="italic dark:text-white text-2xl font-bold underline">
             Me llamo Nicolas
