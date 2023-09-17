@@ -1,7 +1,8 @@
 import Nav from "../components/Nav";
 import { useState } from "react";
-import '../index.css'
+import "../index.css";
 import { PiArrowRightThin, PiArrowLeftThin } from "react-icons/pi";
+import gif from "../../public/home.gif";
 export default function Projects() {
   const [currentText, setCurrentText] = useState(0);
   const texts = [
@@ -53,11 +54,11 @@ export default function Projects() {
     },
   ];
   return (
-    <div   className="bg-gray-100 h-screen dark:bg-gray-800 2xl:w-screen flex flex-col sm:flex-row">
+    <div className="bg-gray-100 h-screen dark:bg-gray-800 2xl:w-screen flex flex-col sm:flex-row">
       <Nav />
-      <div className="sm:w-5/6  dark:text-white flex  sm:flex-col-reverse">
-        <div className=" w-3/4 sm:w-full h-auto sm:h-5 sm:pb-20 sm:py-10 sm:border-t mt-auto pb-20 sm:border-gray-600  sm:pl-0 ">
-          <div className="justify-center flex">
+      <div className="sm:w-5/6 flex-grow dark:text-white flex sm:flex-col-reverse">
+        <div className="w-5/6 bg-contain bg-[url('../../public/home.gif')] dark:opacity-75 sm:w-full bg-right drop-shadow-2xl sm:h-5 sm:pb-20 sm:py-10 sm:border-t align-bottom flex bg-no-repeat  sm:border-gray-600  sm:pl-0 ">
+          <div className={` justify-center h-20 items-center mx-auto mt-auto flex`}>
             <button
               onClick={() =>
                 setCurrentText(currentText == 0 ? 2 : currentText - 1)
@@ -68,7 +69,7 @@ export default function Projects() {
             {texts.map((text, index) => (
               <div className="">
                 <h1
-                  className={`text-center sm:text-xl  text-3xl w-80 sm:w-52 ${
+                  className={`text-center text-3xl w-80 sm:w-52 ${
                     index === currentText ? "block" : "hidden"
                   }`}
                 >
@@ -89,18 +90,19 @@ export default function Projects() {
           style={{
             scrollbarWidth: "thin",
             scrollbarColor: "transparent transparent",
-            maxHeight: "calc(100vh - 50px)", boxSizing: "border-box" 
+            maxHeight: "calc(100vh - 45px)",
+            boxSizing: "border-box",
           }}
           id="div-scroll"
-          className="w-full  border-l max sm:flex-grow sm:border-l-0  overflow-auto  border-gray-600"
+          className="w-full  max sm:flex-grow sm:border-l-0  overflow-auto "
         >
           {texts.map((text, index) => (
             <div
-              className={`mx-auto  ${
+              className={`mx-auto border-l sm:border-l-0 border-gray-600 ${
                 index === currentText ? "block" : "hidden"
               }`}
             >
-              <h1 className="text-center sm:text-lg border-b sm:py-1 border-gray-600 py-5 font-semibold">
+              <h1 className="text-center  sm:text-lg border-b sm:py-1 border-gray-600 py-5 font-semibold">
                 Proyecto
               </h1>
               <div className="border-b flex justify-center border-gray-600">
@@ -122,8 +124,14 @@ export default function Projects() {
                 ¿Que tecnología use?
               </h1>
               <div className="h-full flex-grow flex justify-center ">
-                <div  id="div-scroll"
-      style={{ maxHeight: "calc(100vh - 50px)", boxSizing: "border-box" }} className="grid grid-cols-3 gap-3 px-3 max-h-11 gap-x-20 w-max">
+                <div
+                  id="div-scroll"
+                  style={{
+                    maxHeight: "calc(100vh - 50px)",
+                    boxSizing: "border-box",
+                  }}
+                  className="grid grid-cols-3 gap-3 px-3 max-h-11 gap-x-20 w-max"
+                >
                   {text.technologies.map((tech, index) => (
                     <img
                       key={index}

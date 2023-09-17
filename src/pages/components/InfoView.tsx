@@ -69,7 +69,7 @@ export default function InfoView({ state, text }: any) {
   return (
     <div
       id="div-scroll"
-      style={{ maxHeight: "calc(100vh - 50px)", boxSizing: "border-box" }}
+      style={{ maxHeight: "calc(100vh - 45px)", boxSizing: "border-box" }}
       className="border-l  sm:h-1/2 col-span-2 overflow-auto  sm:col-span-4 sm:border-l-0 sm:border-t  col-start-3 dark:text-white border-gray-600 "
     >
       {texts.map((text, index) => (
