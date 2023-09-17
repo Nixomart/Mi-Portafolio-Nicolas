@@ -2,7 +2,6 @@ import Nav from "../components/Nav";
 import { useState } from "react";
 import "../index.css";
 import { PiArrowRightThin, PiArrowLeftThin } from "react-icons/pi";
-import gif from "../../public/home.gif";
 export default function Projects() {
   const [currentText, setCurrentText] = useState(0);
   const texts = [
