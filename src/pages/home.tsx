@@ -1,4 +1,5 @@
 import Nav from "../components/Nav";
+import home from '../../public/home.gif'
 export default function Home() {
   return (
     <div className="bg-gray-100 relative dark:bg-gray-800  h-screen w-screen flex flex-col sm:flex-row">
@@ -20,24 +21,7 @@ export default function Home() {
           </p>{" "}
         </div>
       </div>
-      <style>
-        {`
-      .relativee::before {
-        content: "";
-        background: no-repeat;
-        background-image: url('../../public/home.gif');
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        
-        width: 100%;
-        height: 100%;
-        mix-blend-mode: difference;
-        z-index: 1;
-      }
-    `}
-      </style>
+   <img src={home} alt="" />
     </div>
   );
 }
