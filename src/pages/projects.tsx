@@ -5,8 +5,6 @@ import { PiArrowRightThin, PiArrowLeftThin } from "react-icons/pi";
 import home from "../../public/home.gif";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 export default function Projects() {
-  const [current, setCurrent] = useState(0);
-  const [tech, setTech] = useState("");
   const [gifLoaded, setGifLoaded] = useState(false);
   useEffect(() => {
     const gifImage = new Image();
