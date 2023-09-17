@@ -1,10 +1,26 @@
 import Nav from "../components/Nav";
-import home from '../../public/home.gif'
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { useEffect, useState } from "react";
+import home from "../../public/home.gif";
 export default function Home() {
-  return (
+  const [gifLoaded, setGifLoaded] = useState(false);
+  useEffect(() => {
+    const gifImage = new Image();
+    gifImage.src = home; // Ruta del GIF
+
+    gifImage.onload = () => {
+      // Una vez que el GIF ha cargado, cambia el estado a true.
+      setGifLoaded(true);
+    };
+  }, []);
+
+  return gifLoaded ? (
     <div className="bg-gray-100 relative dark:bg-gray-800  h-screen w-screen flex flex-col sm:flex-row">
       <Nav />
-      <div className=" sm:bg-cover bg-opacity-75 h-screen bg-contain bg-[url('../../public/home.gif')] w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 pl-5">
+      <div
+        style={{ backgroundImage: `url('${home}')` }}
+        className={`sm:bg-cover bg-opacity-75 h-screen w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 pl-5`}
+      >
         <div className="sm:w-full w-1/3   sm:pt-5 pt-5">
           <h1 className="italic dark:text-white text-xl font-bold">
             Un poco sobre mi.
@@ -21,7 +37,10 @@ export default function Home() {
           </p>{" "}
         </div>
       </div>
-   <img src={home} alt="" />
+    </div>
+  ) : (
+    <div className="flex h-screen w-screen items-center justify-center">
+      <AiOutlineLoading3Quarters className="animate-spin text-4xl" />
     </div>
   );
 }

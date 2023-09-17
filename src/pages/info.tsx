@@ -1,16 +1,28 @@
-import { useState } from "react";
 import Nav from "../components/Nav";
 import "../index.css";
 import InfoView from "./components/InfoView";
+import home from '../../public/home.gif'
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { useState, useEffect } from "react";
 export default function Info() {
   const [current, setCurrent] = useState(0);
   const [tech, setTech] = useState("");
+  const [gifLoaded, setGifLoaded] = useState(false);
+  useEffect(() => {
+    const gifImage = new Image();
+    gifImage.src = home; // Ruta del GIF
 
-  return (
+    gifImage.onload = () => {
+      // Una vez que el GIF ha cargado, cambia el estado a true.
+      setGifLoaded(true);
+    };
+  }, []);
+
+  return gifLoaded ? (
     <div className="bg-gray-100  dark:bg-gray-800 h-screen w-full sm:flex ">
       <Nav />
       <section className="grid sm:border-b sm:border-r  grid-cols-4 sm:flex sm:flex-col w-full">
-        <div className="col-span-2 sm:w-full sm:h-1/2 bg-no-repeat bg-contain bg-right drop-shadow-2xl dark:opacity-75 bg-[url('../../public/home.gif')]">
+        <div style={{backgroundImage: `url('${home}')`}} className="col-span-2 sm:w-full sm:h-1/2 bg-no-repeat bg-contain bg-right drop-shadow-2xl dark:opacity-75">
           <div
             id="div-scroll"
             style={{ maxHeight: "calc(100vh - 45px)", boxSizing: "border-box" }}
@@ -106,5 +118,7 @@ export default function Info() {
         <InfoView text={tech} state={current} />
       </section>
     </div>
-  );
+  ) :  <div className="flex h-screen w-screen items-center justify-center">
+  <AiOutlineLoading3Quarters className="animate-spin text-4xl" />
+</div>;
 }

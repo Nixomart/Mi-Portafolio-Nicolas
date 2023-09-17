@@ -73,7 +73,7 @@ export default function InfoView({ state, text }: any) {
       className="border-l  sm:h-1/2 col-span-2 overflow-auto  sm:col-span-4 sm:border-l-0 sm:border-t  col-start-3 dark:text-white border-gray-600 "
     >
       {texts.map((text, index) => (
-        <div className={`mx-auto  ${index === state ? "block" : "hidden"}`}>
+        <div key={index} className={`mx-auto  ${index === state ? "block" : "hidden"}`}>
           <h1 className="text-center border-b border-gray-600 py-5 font-semibold">
             ¿En donde?
           </h1>
@@ -96,8 +96,8 @@ export default function InfoView({ state, text }: any) {
             ¿Que hice?
           </h1>
           <div className="gap-3 gap-x-20 ">
-          {text.how.map((text:any)=>(
-            <p className="text-center">{text}</p>
+          {text.how.map((text:any, index:any)=>(
+            <p key={index} className="text-center">{text}</p>
           ))}
           </div>
         </div>
@@ -107,8 +107,8 @@ export default function InfoView({ state, text }: any) {
         <div className="flex  justify-around">
           {" "}
           <div className="grid grid-cols-2 self-center gap-x-52 sm:gap-x-10 gap-y-10 ">
-            {frontend.map((fron: any) => (
-              <div className="self-auto">
+            {frontend.map((fron: any, index:any) => (
+              <div key={index} className="self-auto">
                 <img
                   src={fron}
                   className="w-36 sm:w-20 rounded-full hover:shadow-lg transition-all ease-in-out"
@@ -122,8 +122,8 @@ export default function InfoView({ state, text }: any) {
         <div className="flex overflow-y-auto justify-around">
           {" "}
           <div className="grid grid-cols-2  self-center gap-x-52 sm:gap-x-10 gap-y-10 ">
-            {backend.map((fron: any) => (
-              <div className="self-auto">
+            {backend.map((fron: any, index:any) => (
+              <div key={index} className="self-auto">
                 <img
                   src={fron}
                   className="w-36 sm:w-20 rounded-full hover:shadow-lg transition-all ease-in-out"
@@ -137,8 +137,8 @@ export default function InfoView({ state, text }: any) {
         <div className="flex justify-around">
           {" "}
           <div className="grid grid-cols-2 self-center gap-x-52 sm:gap-x-10 gap-y-10 ">
-            {learning.map((fron: any) => (
-              <div className="self-auto">
+            {learning.map((fron: any, index:any) => (
+              <div key={index} className="self-auto">
                 <img
                   src={fron}
                   className="w-36 sm:w-20 rounded-full hover:shadow-lg transition-all ease-in-out"

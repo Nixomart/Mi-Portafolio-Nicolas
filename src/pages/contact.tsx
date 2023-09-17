@@ -1,11 +1,24 @@
 import Nav from "../components/Nav";
 import Pdf from "../../public/Nicolas_Martinez_CV.pdf";
+import home from '../../public/home.gif'
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { useEffect, useState } from "react";
 export default function Contact() {
-  return (
+  const [gifLoaded, setGifLoaded] = useState(false);
+  useEffect(() => {
+    const gifImage = new Image();
+    gifImage.src = home; // Ruta del GIF
+
+    gifImage.onload = () => {
+      // Una vez que el GIF ha cargado, cambia el estado a true.
+      setGifLoaded(true);
+    };
+  }, []);
+  return gifLoaded ?  (
     <div className="bg-gray-100 dark:bg-gray-800 h-screen 2xl:w-screen flex flex-col sm:flex-row">
       <Nav />
-      <div className=" sm:bg-cover bg-opacity-75 h-screen bg-contain bg-[url('../../public/home.gif')] w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 pl-5">
-        <div className="sm:w-3/4 w-96   dark:opacity-75 dark:text-white pl-5 flex flex-col flex-grow">
+      <div style={{backgroundImage: `url('${home}')`}} className="  sm:bg-cover bg-opacity-75 h-screen bg-contain w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 pl-5">
+        <div className="sm:w-3/4 w-96 h-full dark:opacity-75 dark:text-white pl-5 flex flex-col flex-grow">
           <h1 className="italic text-xl font-bold py-5 ">
             Estoy Disponible para cualquier Proyecto o Cualquier propuesta.
           </h1>
@@ -44,5 +57,7 @@ export default function Contact() {
         </div>
       </div>
     </div>
-  );
+  ) :  <div className="flex h-screen w-screen items-center justify-center">
+  <AiOutlineLoading3Quarters className="animate-spin text-4xl" />
+</div>;
 }

@@ -1,8 +1,23 @@
 import Nav from "../components/Nav";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../index.css";
 import { PiArrowRightThin, PiArrowLeftThin } from "react-icons/pi";
+import home from "../../public/home.gif";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 export default function Projects() {
+  const [current, setCurrent] = useState(0);
+  const [tech, setTech] = useState("");
+  const [gifLoaded, setGifLoaded] = useState(false);
+  useEffect(() => {
+    const gifImage = new Image();
+    gifImage.src = home; // Ruta del GIF
+
+    gifImage.onload = () => {
+      // Una vez que el GIF ha cargado, cambia el estado a true.
+      setGifLoaded(true);
+    };
+  }, []);
+
   const [currentText, setCurrentText] = useState(0);
   const texts = [
     {
@@ -52,12 +67,17 @@ export default function Projects() {
       link: "https://quiengana.vercel.app/",
     },
   ];
-  return (
+  return gifLoaded ? (
     <div className="bg-gray-100 h-screen dark:bg-gray-800 2xl:w-screen flex flex-col sm:flex-row">
       <Nav />
       <div className="sm:w-5/6 flex-grow dark:text-white flex sm:flex-col-reverse">
-        <div className="w-5/6 bg-contain bg-[url('../../public/home.gif')] dark:opacity-75 sm:w-full bg-right drop-shadow-2xl sm:h-5 sm:pb-20 sm:py-10 sm:border-t align-bottom flex bg-no-repeat  sm:border-gray-600  sm:pl-0 ">
-          <div className={` justify-center h-20 items-center mx-auto mt-auto flex`}>
+        <div
+          style={{ backgroundImage: `url('${home}')` }}
+          className="w-5/6 bg-contain dark:opacity-75 sm:w-full bg-right drop-shadow-2xl sm:h-5 sm:pb-20 sm:py-10 sm:border-t align-bottom flex bg-no-repeat  sm:border-gray-600  sm:pl-0 "
+        >
+          <div
+            className={` justify-center h-20 items-center mx-auto mt-auto flex`}
+          >
             <button
               onClick={() =>
                 setCurrentText(currentText == 0 ? 2 : currentText - 1)
@@ -66,7 +86,7 @@ export default function Projects() {
               <PiArrowLeftThin className="font-thin z-50 sm:text-4xl text-4xl" />
             </button>
             {texts.map((text, index) => (
-              <div className="">
+              <div key={index} className="">
                 <h1
                   className={`text-center text-3xl w-80 sm:w-52 ${
                     index === currentText ? "block" : "hidden"
@@ -97,6 +117,7 @@ export default function Projects() {
         >
           {texts.map((text, index) => (
             <div
+            key={index}
               className={`mx-auto border-l sm:border-l-0 border-gray-600 ${
                 index === currentText ? "block" : "hidden"
               }`}
@@ -144,6 +165,10 @@ export default function Projects() {
           ))}
         </div>
       </div>
+    </div>
+  ) : (
+    <div className="flex h-screen w-screen items-center justify-center">
+      <AiOutlineLoading3Quarters className="animate-spin text-4xl" />
     </div>
   );
 }
