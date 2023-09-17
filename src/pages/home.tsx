@@ -19,9 +19,9 @@ export default function Home() {
       <Nav />
       <div
         style={{ backgroundImage: `url('${home}')` }}
-        className={`sm:bg-cover bg-opacity-75 h-screen w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 pl-5`}
+        className={`sm:bg-cover bg-opacity-75 h-screen bg-contain w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 pl-5`}
       >
-        <div className="sm:w-full w-1/3   sm:pt-5 pt-5">
+        <div className="sm:w-full w-1/3 sm:pt-5 pt-5">
           <h1 className="italic dark:text-white text-xl font-bold">
             Un poco sobre mi.
           </h1>
