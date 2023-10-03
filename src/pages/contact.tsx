@@ -17,23 +17,17 @@ export default function Contact() {
   return gifLoaded ?  (
     <div className="bg-gray-100 dark:bg-gray-800 h-screen 2xl:w-screen flex flex-col sm:flex-row">
       <Nav />
-      <div style={{backgroundImage: `url('${home}')`}} className="  sm:bg-cover bg-opacity-75 h-screen bg-contain w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 pl-5">
+      <div style={{backgroundImage: `url('${home}')`}} className="  sm:bg-cover bg-opacity-75 h-screen bg-contain w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 ">
         <div className="sm:w-3/4 w-96 h-full dark:opacity-75 dark:text-white pl-5 flex flex-col flex-grow">
           <h1 className="italic text-xl font-bold py-5 ">
             Estoy Disponible para cualquier Proyecto o Cualquier propuesta.
           </h1>
-          <p className=" font-semibold underline">Mis redes:</p>
+          <p className=" font-semibold underline">Contactame:</p>
           <div className="flex-grow flex flex-col  pb-10 ">
             <div className="">
               <h2 className="font-semibold">Email: </h2>
               <p>martinezz.nnicolas@gmail.com</p>
-              <h2 className="font-semibold ">Instagram: </h2>
-              <a
-                href="https://www.instagram.com/nixo_sslsl/"
-                className="hover:underline"
-              >
-                Nixo_sslsl
-              </a>
+             
             </div>
             <div className="mt-auto ">
               <h2 className="font-semibold">Github: </h2>
