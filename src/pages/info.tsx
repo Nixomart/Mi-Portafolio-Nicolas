@@ -2,7 +2,6 @@ import Nav from "../components/Nav";
 import "../index.css";
 import InfoView from "./components/InfoView";
 import home from '../../public/home.gif'
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import Loading from "./components/Loading";
 export default function Info() {

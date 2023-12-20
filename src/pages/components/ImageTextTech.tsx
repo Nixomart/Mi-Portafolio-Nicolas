@@ -1,9 +1,4 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-interface Tech {
-    name: string,
-    image: string
-}
 export default function ImageTextTech({index, fron}:any ) {
   return (
     <div

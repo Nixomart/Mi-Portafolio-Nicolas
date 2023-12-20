@@ -1,5 +1,4 @@
 import Nav from "../components/Nav";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import home from "../../public/home.gif";
 import Loading from "./components/Loading";

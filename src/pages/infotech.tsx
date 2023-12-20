@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import data from "../dataExample/data";
 import Nav from "../components/Nav";

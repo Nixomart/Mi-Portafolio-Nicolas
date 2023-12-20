@@ -16,7 +16,7 @@ h1, h2, label, span, p, h3,h4,h5, a,li, ol, ul{
     text-orientation: upright;
   }
 
-  .container:before, .container:after {
+  /* .container:before, .container:after {
     content: "";
     width: 30vmax;
     height: 30vmax;
@@ -40,4 +40,4 @@ h1, h2, label, span, p, h3,h4,h5, a,li, ol, ul{
     justify-content: space-evenly;
     overflow: hidden;
     position: absolute;
-}
+} */
