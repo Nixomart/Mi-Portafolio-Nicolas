@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-h1, h2, label, span, p, h3,h4,h5, a,li{
+h1, h2, label, span, p, h3,h4,h5, a,li, ol, ul{
     font-family: 'Raleway', sans-serif;
 }
 
@@ -15,3 +15,29 @@ h1, h2, label, span, p, h3,h4,h5, a,li{
     writing-mode: vertical-lr;
     text-orientation: upright;
   }
+
+  .container:before, .container:after {
+    content: "";
+    width: 30vmax;
+    height: 30vmax;
+    position: absolute;
+    left: -20vmin;
+    top: -20vmin;
+    animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+    z-index: 20;
+    will-change: border-radius,transform;
+    transform-origin: 55% 55%;
+    pointer-events: none;
+}
+
+.container {
+    min-height: calc(100vh - 2rem);
+    padding-top: 2rem;
+    display: flex;
+    z-index: 20;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    overflow: hidden;
+    position: absolute;
+}

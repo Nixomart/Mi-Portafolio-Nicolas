@@ -2,6 +2,7 @@ import Nav from "../components/Nav";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import home from "../../public/home.gif";
+import Loading from "./components/Loading";
 export default function Home() {
   const [gifLoaded, setGifLoaded] = useState(false);
   useEffect(() => {
@@ -19,7 +20,7 @@ export default function Home() {
       <Nav />
       <div
         style={{ backgroundImage: `url('${home}')` }}
-        className={`sm:bg-cover bg-opacity-75 h-screen bg-contain w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 pl-5`}
+        className={`sm:bg-cover bg-opacity-75 h-screen bg-contain w-full bg-right drop-shadow-2xl bg-no-repeat  pl-5`}
       >
         <div className="sm:w-full w-1/3 sm:pt-5 pt-5">
           <h1 className="italic dark:text-white text-xl font-bold">
@@ -39,8 +40,6 @@ export default function Home() {
       </div>
     </div>
   ) : (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <AiOutlineLoading3Quarters className="animate-spin text-4xl" />
-    </div>
+    <Loading />
   );
 }

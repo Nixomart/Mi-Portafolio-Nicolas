@@ -18,7 +18,7 @@ export default function Contact() {
     <div className="bg-gray-100 dark:bg-gray-800 h-screen 2xl:w-screen flex flex-col sm:flex-row">
       <Nav />
       <div style={{backgroundImage: `url('${home}')`}} className="  sm:bg-cover bg-opacity-75 h-screen bg-contain w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 ">
-        <div className="sm:w-3/4 w-96 h-full dark:opacity-75 dark:text-white pl-5 flex flex-col flex-grow">
+        <div className="sm:w-3/4 w-96 h-full  dark:text-white pl-5 flex flex-col flex-grow">
           <h1 className="italic text-xl font-bold py-5 ">
             Estoy Disponible para cualquier Proyecto o Cualquier propuesta.
           </h1>

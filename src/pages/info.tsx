@@ -4,6 +4,7 @@ import InfoView from "./components/InfoView";
 import home from '../../public/home.gif'
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useState, useEffect } from "react";
+import Loading from "./components/Loading";
 export default function Info() {
   const [current, setCurrent] = useState(0);
   const [tech, setTech] = useState("");
@@ -118,7 +119,5 @@ export default function Info() {
         <InfoView text={tech} state={current} />
       </section>
     </div>
-  ) :  <div className="flex h-screen w-screen items-center justify-center">
-  <AiOutlineLoading3Quarters className="animate-spin text-4xl" />
-</div>;
+  ) :  <Loading />;
 }

@@ -48,22 +48,7 @@ export default function Projects() {
         "https://yt3.googleusercontent.com/h6cGMuMQo9kjtFACrBi5X86evZz8oudwh1Wo5gjIinW6UqwdnSTXH0Yj_D8gS-QlQ7OHLGnfDQ=s900-c-k-c0x00ffffff-no-rj",
       ],
       link: "https://www.vercatalogo.online/",
-    },
-    {
-      title: "¿Quién Gana?",
-      paragraph:
-        "Sitio para votar por el próximo presidente en elecciones presidenciales.",
-      technologies: [
-        "https://www.ritechpune.com/backend/courseicon/ReactJS.png",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png",
-        "https://yt3.googleusercontent.com/ikv41jMTr1uHGdILrJhvbfVJcDt4oqhwApKX37TjAleF_cRPbF2W-waj7uMnS5JySvnlvAlTCg=s900-c-k-c0x00ffffff-no-rj",
-        "https://yt3.googleusercontent.com/h6cGMuMQo9kjtFACrBi5X86evZz8oudwh1Wo5gjIinW6UqwdnSTXH0Yj_D8gS-QlQ7OHLGnfDQ=s900-c-k-c0x00ffffff-no-rj",
-        "https://i.pinimg.com/564x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg",
-        "https://i.pinimg.com/564x/08/86/77/0886779176db12da5565ca4b9541e2b8.jpg",
-        "https://www.gstatic.com/devrel-devsite/prod/v670576875a5cc9e38d1ef4dc0b1c46d2dc586275242dba27f9cea38af0674100/firebase/images/touchicon-180.png",
-      ],
-      link: "https://quiengana.vercel.app/",
-    },
+    }
   ];
   return gifLoaded ? (
     <div className="bg-gray-100 h-screen dark:bg-gray-800 2xl:w-screen flex flex-col sm:flex-row">
@@ -78,7 +63,7 @@ export default function Projects() {
           >
             <button
               onClick={() =>
-                setCurrentText(currentText == 0 ? 2 : currentText - 1)
+                setCurrentText(currentText == 0 ? 1 : currentText - 1)
               }
             >
               <PiArrowLeftThin className="font-thin z-50 sm:text-4xl text-4xl" />
@@ -96,7 +81,7 @@ export default function Projects() {
             ))}
             <button
               onClick={() =>
-                setCurrentText(currentText === 2 ? 0 : currentText + 1)
+                setCurrentText(currentText === 1 ? 0 : currentText + 1)
               }
             >
               <PiArrowRightThin className="font-thin sm:text-4xl text-4xl" />
