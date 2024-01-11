@@ -1,6 +1,7 @@
 import Nav from "../components/Nav";
 import Pdf from "../../public/Nicolas_Martinez_CV.pdf";
-import home from '../../public/home.gif'
+import PdfE from "../../public/Resume_Nicolas_Martinez_CV.pdf";
+import home from "../../public/home.gif";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useEffect, useState } from "react";
 export default function Contact() {
@@ -14,10 +15,13 @@ export default function Contact() {
       setGifLoaded(true);
     };
   }, []);
-  return gifLoaded ?  (
+  return gifLoaded ? (
     <div className="bg-gray-100 dark:bg-gray-800 h-screen 2xl:w-screen flex flex-col sm:flex-row">
       <Nav />
-      <div style={{backgroundImage: `url('${home}')`}} className="  sm:bg-cover bg-opacity-75 h-screen bg-contain w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 ">
+      <div
+        style={{ backgroundImage: `url('${home}')` }}
+        className="  sm:bg-cover bg-opacity-75 h-screen bg-contain w-full bg-right drop-shadow-2xl bg-no-repeat dark:opacity-75 "
+      >
         <div className="sm:w-3/4 w-96 h-full  dark:text-white pl-5 flex flex-col flex-grow">
           <h1 className="italic text-xl font-bold py-5 ">
             Estoy Disponible para cualquier Proyecto o Cualquier propuesta.
@@ -27,7 +31,6 @@ export default function Contact() {
             <div className="">
               <h2 className="font-semibold">Email: </h2>
               <p>martinezz.nnicolas@gmail.com</p>
-             
             </div>
             <div className="mt-auto ">
               <h2 className="font-semibold">Github: </h2>
@@ -42,16 +45,23 @@ export default function Contact() {
               >
                 Mi portafolio - Github
               </a>
-              <h2 className="font-semibold">Descargar CV: </h2>
-              <a href={Pdf} download className="hover:underline">
-                Mi Curriculum
-              </a>
+              <div className="space-y-1 flex flex-col">
+                <h2 className="font-semibold">Descargar CV | Download Resume: </h2>
+                <a href={Pdf} download className="hover:underline">
+                  Mi Curriculum
+                </a>
+                <a href={PdfE} download className="hover:underline">
+                  Resume
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  ) :  <div className="flex h-screen w-screen items-center justify-center">
-  <AiOutlineLoading3Quarters className="animate-spin text-4xl" />
-</div>;
+  ) : (
+    <div className="flex h-screen w-screen items-center justify-center">
+      <AiOutlineLoading3Quarters className="animate-spin text-4xl" />
+    </div>
+  );
 }
