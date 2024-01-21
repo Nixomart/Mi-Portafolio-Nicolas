@@ -1,6 +1,6 @@
 import Nav from "../components/Nav";
 import Pdf from "../../public/Nicolas_Martinez_CV.pdf";
-import PdfE from "../../public/Resume_Nicolas_Martinez_CV.pdf";
+import PdfE from "../../public/Resume_Nicolas_Martinez.pdf";
 import home from "../../public/home.gif";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useEffect, useState } from "react";
