@@ -200,40 +200,34 @@ export const data = {
   learning: [
     {
       name: "docker",
-      image: 
-    "https://i0.wp.com/thinkground.studio/wp-content/uploads/2019/04/190421_Docker-Logo.png?resize=314%2C268",
-
+      image:
+        "https://i0.wp.com/thinkground.studio/wp-content/uploads/2019/04/190421_Docker-Logo.png?resize=314%2C268",
     },
     {
       name: "nextjs",
-      image: 
-    "https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png",
-
+      image:
+        "https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png",
     },
     {
-      name: "reactnative" ,
-      image: 
-    "https://solidstudio.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Flofvu8al%2Fproduction%2Faabfcf1734f9e1e4379f4f80042bdf11e2e57dbf-420x308.png&w=1080&q=75",
-
+      name: "reactnative",
+      image:
+        "https://solidstudio.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Flofvu8al%2Fproduction%2Faabfcf1734f9e1e4379f4f80042bdf11e2e57dbf-420x308.png&w=1080&q=75",
     },
     {
       name: "wpf",
-      image: 
-    "https://scientiait.blob.core.windows.net/programandoamedianoche/wp-content/uploads/2009/09/develop-wpf-and-xaml-programs.jpg",
-
+      image:
+        "https://scientiait.blob.core.windows.net/programandoamedianoche/wp-content/uploads/2009/09/develop-wpf-and-xaml-programs.jpg",
     },
     {
-      name:"windowsforms" ,
-      image: 
-    "https://i.pinimg.com/474x/45/1c/3e/451c3e4fab9236c8166ba774b715bd2c.jpg",
-
-    }
-    ,{
+      name: "windowsforms",
+      image:
+        "https://i.pinimg.com/474x/45/1c/3e/451c3e4fab9236c8166ba774b715bd2c.jpg",
+    },
+    {
       name: "cicd",
       image:
-    "https://s3.amazonaws.com/vipm-io-media-files-production/media/package-list-images/7d7747a7-68b1-4cd7-9527-19eb96be9d7c.png",
-
-    }
+        "https://s3.amazonaws.com/vipm-io-media-files-production/media/package-list-images/7d7747a7-68b1-4cd7-9527-19eb96be9d7c.png",
+    },
   ],
   texts: [
     {
@@ -249,26 +243,28 @@ export const data = {
         'Fue mi primer trabajo "Formal" en donde tenia que hacer entregas de avances en el tiempo estimado y documentar lo que hacia',
     },
     {
-      title: "Agencia de Marketing - Perú - 2022",
+      title: "Junior Java Developer - No Country      ",
       how: [
-        "euphoria.pe",
-        "thelittlemarketperu.com",
-        "santos-films.com",
-        "lacorrientedelgolfo.net",
+        "Patrones de Diseño - Builder, Pipeline y DTO",
+        "Spring Boot - REST API - POO - MySQL",
+        "Dockerizacion de Aplicacion - Redes - Docker Compose",
+        "Spring Security - Web Config - JWT Filters - JWT Generator",
+        "Manejo de tokens - Proteccion de endpoints        ",
+        "Manejo de Roles        ",
+        "Consumo de APIs externas"
       ],
       paragraph:
-        "Estuve como Diseñador haciendo uso de la Herramienta figma - Creación de Logos, Banners, imágenes publicitarias - Rediseños de Webs en Wordpresss/React js - Estrategias de Marketing / Facebook ADS / Segmentación ",
+        "Como Java Junior Developer en No country, estuve a cargo de el diseño del backend y la gestión de la base de datos. Mi contribución fue crucial para implementar soluciones eficientes en el desarrollo de aplicaciones Java, demostrando habilidades destacadas en la estructuración y optimización del backend y la base de datos.        ",
     },
     {
-      title: "Desarrollador Web Freelancer - 2021 - Actualidad",
+      title: "Junior React Developer - Foo Talent Group",
       how: [
-        "piedrasuma.com",
-        "gato.tv",
-        "mandarinatv.com",
-        "mohinorafm.com",
-        "jrcontenidos.com.ar",
+        "Uso de Hooks para la creacion de nuevas funcionalidades        ",
+        "Consumo de API - Uso de Axios        ",
+        "Docker",
+        "Redux - TanStack Query",
       ],
-      paragraph: "Actualmente hago paginas web usando el CMS wordpress. ",
+      paragraph: "Tuve la oportunidad de potenciar mis habilidades al trabajar con React, profundizando en el manejo de librerías y perfeccionando técnicas de optimización. Esta experiencia enriquecedora me permitió contribuir significativamente al desarrollo de interfaces robustas y eficientes.",
     },
   ],
 };

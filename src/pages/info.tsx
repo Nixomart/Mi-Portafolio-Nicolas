@@ -48,7 +48,7 @@ export default function Info() {
           }} */
               className="py-5 transition-all ease-in-out hover:bg-gray-700 hover:text-white"
             >
-              <h1 className="font-semibold">Douvery</h1>
+              <h1 className="font-semibold">Trainee React Developer</h1>
 
               <hr className="py-[0.5px] my-2 w-full   bg-gray-600" />
             </div>
@@ -59,7 +59,7 @@ export default function Info() {
               /* onMouseLeave={()=>{setCurrent(-1), setTech('')}} */ className="py-5 transition-all ease-in-out hover:bg-gray-700 hover:text-white"
             >
               <h1 className="font-semibold">
-                Agencia de Marketing - Perú - 2022
+                Junior Java Developer
               </h1>
 
               <hr className="py-[0.3px] my-2 w-full   bg-gray-600" />
@@ -71,7 +71,7 @@ export default function Info() {
               /* onMouseLeave={()=>{setCurrent(-1), setTech('')}} */ className="py-5 transition-all ease-in-out hover:bg-gray-700 hover:text-white"
             >
               <h1 className="font-semibold">
-                Desarrollador Web Freelancer - 2021 - Actualidad
+                Junior React Developer
               </h1>
 
               <hr className="py-[0.3px] my-2 w-full   bg-gray-600" />
